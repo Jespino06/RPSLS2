@@ -1,7 +1,7 @@
 class Player:
-    def __init__(self, name, gesture):
+    def __init__(self, name, gesture_list):
         self.name = name
-        self.gesture = gesture
+        self.gesture_list = self.gesture_list = ['Rock', 'Paper', 'Scissor', 'Spock', 'Lizard']
         pass
 
 gesture_list = ['Rock', 'Paper', 'Scissor', 'Spock', 'Lizard']

@@ -25,4 +25,17 @@ class Game:
             else:
                 print("There was an error, please enter a single digit number. ")
 
-                
+    def display_gesture_options(self):
+        num = int(input('Please choose from the following options: 1. Rock, 2. Scissor, 3. Spock, 4. Lizard'))
+        if num == 1:
+            print('Rock')
+        elif num == 2:
+            print('Scissor')
+        elif num == 3:
+            print('Spock')
+        elif num == 4:
+            print('Lizard')
+    
+    def display_winner(self):
+        
+
