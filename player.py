@@ -4,4 +4,6 @@ class Player:
         self.gesture = gesture
         pass
 
-    
+gesture_list = ['Rock', 'Paper', 'Scissor', 'Spock', 'Lizard']
+
+
