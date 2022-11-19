@@ -1,15 +1,16 @@
 from human import Human
 from ai import Ai
-from player import Player
+from game import Game
 
-# human1 = Human('Player one')
-# human2 = Human('Player two')
-# human3 = Human('Player three')
 
-# print(human1.name)
-# print(human2.name)
-# print(human3.name)
+Enter_game_domain = Game()
+Enter_game_domain.run_game()
 
-# ai_one = Ai('Computer_one')
-# ai_two = Ai('Computer_two')
+
+
+
+
+
+
+
 
