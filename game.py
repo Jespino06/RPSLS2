@@ -44,7 +44,10 @@ class Game:
     print()
 
     def gesture_options(self):
-            x = int(input('Please choose from the following options: 1. Rock, 2. Paper 3. Scissor, 4. Spock, 5. Lizard'))
+        self.human = 0
+        self.ai = 0
+        
+        x = int(input('Please choose from the following options: 1. Rock, 2. Paper 3. Scissor, 4. Spock, 5. Lizard'))
         if self.human == 'Rock':
             if self.ai == 'Scissors':
                 print('Rock crushes Scissors. Thats a rough loss!')
@@ -75,7 +78,17 @@ class Game:
         elif self.human == 'Spock':
             if self.ai == 'Rock':
                 print('Spock vaporizes Rock. You got pulverized!')
+        elif self.human == self.ai:
+            print('Oh my you have a tie!!!')
+            self.human +=1
+            self.ai +=1     
     
+    def run_game(self):
+        self.intro_message()
+        self.display_gesture_options()
+        self.num_of_players()
+        self.gesture_options()
+        
     
     
     
@@ -113,7 +126,7 @@ class Game:
     #     elif player_one and player_two == 5:
     #         print('Lizard')
 
-    print()
+    # print()
 
     
     

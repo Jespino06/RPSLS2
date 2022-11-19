@@ -14,3 +14,4 @@ def spur_list(list):
 randomly_selected_pick = spur_list(Ai.gesture_list)
 print(randomly_selected_pick)
 
+
