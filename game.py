@@ -3,8 +3,10 @@ from ai import Ai
 
 class Game:
     def __init__(self):
-        self.human = Human('Player_one')
-        self.ai = Ai('Computer_one')
+        self.human = Human('human1')
+        self.human = Human('human2')
+        self.ai = Ai('ai_1')
+        self.ai = Ai('ai_2')
         pass
 
     def intro_message(self):
@@ -21,9 +23,10 @@ class Game:
         print('Spock smashes Scissors')
         print('Lizard eats Paper')
         pass
-
+    
+    
     print()
-
+    
     def num_of_players(self):
         while True:
             try:
