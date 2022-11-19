@@ -5,7 +5,7 @@ from player import Player
 class Game:
     def __init__(self):
         self.human = Human('human1')
-        self.human = Human('human2')
+        self.human = Human('human')
         self.ai = Ai('ai_1')
         self.ai = Ai('ai_2')
         pass
