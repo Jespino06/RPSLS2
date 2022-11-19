@@ -47,36 +47,34 @@ class Game:
             x = int(input('Please choose from the following options: 1. Rock, 2. Paper 3. Scissor, 4. Spock, 5. Lizard'))
         if self.human == 'Rock':
             if self.ai == 'Scissors':
-                print('Rock crushes Scissors')
+                print('Rock crushes Scissors. Thats a rough loss!')
         elif self.human == 'Scissors':
             if self.ai == 'Paper':
-                print('Scissors cuts Paper')
+                print('Scissors cuts Paper. You got snipped!')
         elif self.human == "Paper":
             if self.ai == 'Rock':
-                print('Paper covers Rock')
+                print('Paper covers Rock. You loss with no paper cuts!')
         elif self.human == 'Rock':
             if self.ai == 'Lizard':
-                print('Rock crushes Lizard')
+                print('Rock crushes Lizard. Ouch that was a brutal loss!')
         elif self.human == 'Lizard':
             if self.ai == 'Spock':
-                print('Lizard poisons Spock')
+                print('Lizard poisons Spock. What a harsh way to loose!')
         elif self.human == 'Spock':
             if self.ai == 'Scissors':
-                print('Spock smashes Scissors')
+                print('Spock smashes Scissors. That was a smashing loss!')
         elif self.human == 'Scissors':
             if self.ai == 'Lizard':
-                print('Scissors decapitates Lizard')
+                print('Scissors decapitates Lizard. Messy loss!')
         elif self.human == 'Lizard':
             if self.ai == 'Paper':
-        elif self.human == 'Lizard':
-            if self.ai == 'Paper':
-                print('Lizard eats Paper')
+                print('Lizard eats Paper. Not a tasty loss!')
         elif self.human == 'Paper':
             if self.ai == 'Spock':
-                print('Paper disproves Spock')
+                print('Paper disproves Spock. You lose!')
         elif self.human == 'Spock':
             if self.ai == 'Rock':
-                print('Spock vaporizes Rock')
+                print('Spock vaporizes Rock. You got pulverized!')
     
     
     
