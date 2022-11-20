@@ -2,7 +2,7 @@ from player import Player
 
 class Ai(Player):
     def __init__(self, name, gesture_list) -> None:
-        super().__init__()
+        super().__init__(name, gesture_list)
         self.name = self.name
         self.gesture_list = self.gesture_list
 
