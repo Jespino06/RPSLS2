@@ -6,8 +6,8 @@ class Game:
     def __init__(self):
         self.player_one = Human('player1')
         self.player_two = Human('player2')
-        self.ai_one = Ai('computer1)')
-        self.ai_two = Ai('computer_two')
+        # self.ai_one = Ai('computer1)')
+        # self.ai_two = Ai('computer_two')
         pass
 
     def intro_message(self):
@@ -55,27 +55,38 @@ class Game:
 
         if self.player_one == "Rock":
             self.player_one = 1
+            print('Player one, chose Rock!')
         elif self.player_two == "Rock":
             self.player_two == 1
+            print("Player two, chose Rock!")
         elif self.player_one == "Paper":
             self.player_one = 2
+            print('Player one, chose Paper!')
         elif self.player_two == "Paper":
             self.player_two = 2
+            print('Player two, chose Paper!')
         elif self.player_one == "Scissor":
             self.player_one = 3
+            print('Player one, chose Scissor!')
         elif self.player_two == "Scissor":
             self.player_two = 3
+            print('Player two, chose Scissor!')
         elif self.player_one == "Spock":
             self.player_one = 4
+            print('Player one, chose Spock!')
         elif self.player_two == "Spock":
             self.player_two = 4
+            print('Player two, chose Spock!')
         elif self.player_one == "Lizard":
             self.player_one = 5
+            print('Player one, chose Lizard!')
         elif self.player_two == "Lizard":
             self.player_two = 5
-
+            print('Player two, chose Lizard')
         print(self.player_one)
         print(self.player_two)
+
+
         
 
     

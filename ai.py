@@ -6,6 +6,6 @@ class Ai(Player):
         super().__init__(name)
 
 
-def spur_list(list):
-    self.chosen_gesture = (random.choice(self.gesture_list))
+    def choose_gesture(self):
+        self.chosen_gesture = (random.choice(self.gesture_list))
    

@@ -3,11 +3,11 @@ class Player:
         self.name = name
         self.gesture_list = ['Rock', 'Paper', 'Scissor', 'Spock', 'Lizard']
         self.score = 0
-        self.chosen_gesture = ''
+        self.chosen_gesture = ""
         pass
 
     
-
+    def 
    
 
     
