@@ -1,13 +1,15 @@
 class Player:
-    def __init__(self, name, gesture_list):
+    def __init__(self, name):
         self.name = name
-        self.gesture_list = gesture_list
+        self.gesture_list = ['Rock', 'Paper', 'Scissor', 'Spock', 'Lizard']
+        self.score = 0
+        self.chosen_gesture = ''
         pass
-
-    gesture_list = ['Rock', 'Paper', 'Scissor', 'Spock', 'Lizard']
-
-    options_list = ['Rock crushes Scissors', 'Scissors cuts Paper', 'Paper covers Rock', 'Rock crushes Lizard', 'Lizard poisons Spock', 'Spock smashes Scissors', 'Scissors decapitates Lizard', 'Lizard eats Paper', 'Paper disproves Spock', 'Spock vaporizes Rock']
 
     
 
-    # self.options_list = self.options_list
+   
+
+    
+
+   

@@ -1,18 +1,11 @@
 from player import Player
-
-class Ai(Player):
-    def __init__(self, name, gesture_list) -> None:
-        super().__init__(name, gesture_list)
-        self.name = self.name
-        self.gesture_list = self.gesture_list
-
 import random
 
+class Ai(Player):
+    def __init__(self, name):
+        super().__init__(name)
+
+
 def spur_list(list):
-    randomized_choice = (random.choice(list))
-    return randomized_choice
-
-randomly_selected_pick = spur_list(Ai.gesture_list)
-print(randomly_selected_pick)
-
-
+    self.chosen_gesture = (random.choice(self.gesture_list))
+   
