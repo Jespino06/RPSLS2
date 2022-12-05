@@ -24,6 +24,7 @@ class Human(Player):
         elif self.player_one == "Lizard":
             self.player_one = [5]
             print('Player one, chose Lizard!')
+            return self.player_one
     
         if self.player_two == "Rock":
             self.player_two = [1]
@@ -40,6 +41,7 @@ class Human(Player):
         elif self.player_two == "Lizard":
             self.player_two = [5]
             print('Player two, chose Lizard!')
+            return self.player_two
         
         
         # while self.player == self.chosen_gesture:
