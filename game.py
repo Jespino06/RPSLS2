@@ -4,10 +4,10 @@ from ai import Ai
 
 class Game:
     def __init__(self):
-        self.player_one = Human('player one')
-        self.player_two = Human('player one')
-        self.ai_one = Ai('computer one)')
-        self.ai_two = Ai('computer two')
+        self.player = self.player_one = Human('player one')
+        self.player = self.player_two = Human('player one')
+        self.ai = self.ai_one = Ai('computer one)')
+        self.ai = self.ai_two = Ai('computer two')
         pass
 
     def intro_message(self):
@@ -37,91 +37,108 @@ class Game:
     def num_of_players(self):
         while True:
             try:
-                num = int(input("How many will be playing? Enter 1, 2, or 3. "))
+                user_input = int(input("How many will be playing? Enter 1, 2, or 3. "))
             except ValueError:
                 print("There was an error, please enter a single digit number. ")
                 continue
-            if num <4 and num > 0:
-                print(num)
+            if user_input <4 and user_input > 0:
+                print(user_input)
                 break
             else:
                 print("There was an error, please enter a single digit number. ")
+        
+        if user_input == "1":
 
+    
+    
     print()
     print()
 
-    def choose_gesture(self):
+    
+        
+    
+    def game_wins(self):
         self.player_one = 0
         self.player_two = 0
         self.ai_one = 0
         self.ai_two = 0
         txt = "Player, you win!" or "Computer, you win!"
         s = txt.count('Player, you win' or 'Computer, you win!')
-
-        if self.player_one or self.player_two == self.ai_one or self.ai_two:
-            print('Oh my you have a tie!!!')
-        elif self.player_one or self.player_two == 'Rock':
-            if self.ai_one or self.ai_two == 'Scissors':
-                print('Rock crushes Scissors. Player, you win!')
-        elif self.player_one or self.player_two == 'Scissors':
-            if self.ai_one or self.ai_two == 'Paper':
-                print('Scissors cuts Paper. Player, you win!')
-        elif self.player_one or self.player_two == "Paper":
-            if self.ai_one or self.ai_two == 'Rock':
-                print('Paper covers Rock. Player, you win!')
-        elif self.player_one or self.player_two == 'Rock':
-            if self.ai_one or self.ai_two == 'Lizard':
-                print('Rock crushes Lizard. Player, you win!!')
-        elif self.player_one or self.player_two == 'Lizard':
-            if self.ai_one or self.ai_two == 'Spock':
-                print('Lizard poisons Spock. Player, you win!')
-        elif self.player_one or self.player_two == 'Spock':
-            if self.ai_one or self.ai_two == 'Scissors':
-                print('Spock smashes Scissors. Player, you win!')
-        elif self.player_one or self.player_two == 'Scissors':
-            if self.ai_one or self.ai_two == 'Lizard':
-                print('Scissors decapitates Lizard. Player, you win!')
-        elif self.player_one or self.player_two == 'Lizard':
-            if self.ai_one or self.ai_two == 'Paper':
-                print('Lizard eats Paper. Player, you win')
-        elif self.player_one or self.player_two == 'Paper':
-            if self.ai_one or self.ai_two == 'Spock':
-                print('Paper disproves Spock. Player, you win!')
-        elif self.player_one or self.player_two == 'Spock':
-            if self.ai_one or self.ai_two == 'Rock':
-                print('Spock vaporizes Rock. Player, you win!')
-        elif self.ai_one or self.ai_two == 'Rock':
-            if self.player_one or self.player_two == 'Scissors':
-                print('Rock crushes Scissors. Computer, you win!')
-        elif self.ai_one or self.ai_two == 'Scissors':
-            if self.player_one or self.player_two == 'Paper':
-                print('Scissors cuts Paper. Computer, you win!')
-        elif self.ai_one or self.ai_two == "Paper":
-            if self.player_one or self.player_two == 'Rock':
-                print('Paper covers Rock. Computer, you win!')
-        elif self.ai_one or self.ai_two == 'Rock':
-            if self.player_one or self.player_two == 'Lizard':
-                print('Rock crushes Lizard. Computer, you win!!')
-        elif self.ai_one or self.ai_two == 'Lizard':
-            if self.player_one or self.player_two == 'Spock':
-                print('Lizard poisons Spock. Computer, you win!')
-        elif self.ai_one or self.ai_two == 'Spock':
-            if self.player_one or self.player_two == 'Scissors':
-                print('Spock smashes Scissors. Computer, you win!')
-        elif self.ai_one or self.ai_two == 'Scissors':
-            if self.player_one or self.player_two == 'Lizard':
-                print('Scissors decapitates Lizard. Computer, you win!')
-        elif self.ai_one or self.ai_two == 'Lizard':
-            if self.player_one or self.player_two == 'Paper':
-                print('Lizard eats Paper. Computer, you win')
-        elif self.ai_one or self.ai_two == 'Paper':
-            if self.player_one or self.player_two == 'Spock':
-                print('Paper disproves Spock. Computer, you win!')
-        elif self.ai_one or self.ai_two == 'Spock':
-            if self.player_one or self.player_two == 'Rock':
-                print('Spock vaporizes Rock. Computer, you win!')
         
-        while self.player_one or self.player_two == self.ai_one or self.ai_two == True:
+    def run_game(self):
+        self.intro_message()
+        self.display_gesture_options()
+        self.num_of_players()
+        self.choose_gesture()
+        
+
+
+    def choosen_gesture(self):
+        if self.player == self.ai_gesture:
+            print('Oh my you have a tie!!!')
+        elif self.player_one == 'Rock':
+            if self.ai == 'Scissors':
+                print('Rock crushes Scissors. Player one, you win!')
+        elif self.player_one == 'Scissors':
+            if self.ai == 'Paper':
+                print('Scissors cuts Paper. Player one, you win!')
+        elif self.player_one  == "Paper":
+            if self.ai == 'Rock':
+                print('Paper covers Rock. Player one, you win!')
+        elif self.player_one  == 'Rock':
+            if self.ai == 'Lizard':
+                print('Rock crushes Lizard. Player one, you win!!')
+        elif self.player_one  == 'Lizard':
+            if self.ai == 'Spock':
+                print('Lizard poisons Spock. Player one, you win!')
+        elif self.player_one == 'Spock':
+            if self.ai == 'Scissors':
+                print('Spock smashes Scissors. Player one, you win!')
+        elif self.player_one == 'Scissors':
+            if self.ai == 'Lizard':
+                print('Scissors decapitates Lizard. Player one, you win!')
+        elif self.player_one == 'Lizard':
+            if self.ai == 'Paper':
+                print('Lizard eats Paper. Player one, you win')
+        elif self.player_one == 'Paper':
+            if self.ai== 'Spock':
+                print('Paper disproves Spock. Player one, you win!')
+        elif self.player_one == 'Spock':
+            if self.ai == 'Rock':
+                print('Spock vaporizes Rock. Player one, you win!')
+        elif self.player_two== self.ai:
+            print('Oh my you have a tie!!!')
+        elif self.player_two == 'Rock':
+            if self.ai == 'Scissors':
+                print('Rock crushes Scissors. Player two, you win!')
+        elif self.player_two == 'Scissors':
+            if self.ai == 'Paper':
+                print('Scissors cuts Paper. Player two, you win!')
+        elif self.player_two  == "Paper":
+            if self.ai == 'Rock':
+                print('Paper covers Rock. Player two, you win!')
+        elif self.player_two  == 'Rock':
+            if self.ai == 'Lizard':
+                print('Rock crushes Lizard. Player two, you win!!')
+        elif self.player_two  == 'Lizard':
+            if self.ai == 'Spock':
+                print('Lizard poisons Spock. Player two, you win!')
+        elif self.player_two == 'Spock':
+            if self.ai == 'Scissors':
+                print('Spock smashes Scissors. Player two, you win!')
+        elif self.player_two == 'Scissors':
+            if self.ai == 'Lizard':
+                print('Scissors decapitates Lizard. Player two, you win!')
+        elif self.player_two == 'Lizard':
+            if self.ai == 'Paper':
+                print('Lizard eats Paper. Player two, you win')
+        elif self.player_two == 'Paper':
+            if self.ai== 'Spock':
+                print('Paper disproves Spock. Player two, you win!')
+        elif self.player_two == 'Spock':
+            if self.ai == 'Rock':
+                print('Spock vaporizes Rock. Player two, you win!')
+        while self.player_one or self.player_two == self.ai:
             user_input = input('Play again? Y/N. ')
             if user_input == 'Y':
                 continue
@@ -131,7 +148,87 @@ class Game:
             self.player_two +=1
             self.ai_one +=1 
             self.ai_two +=1
-            print(s) 
+            print(s)
+   
+
+    
+
+   
+        
+        # if self.player_one or self.player_two == self.ai_one or self.ai_two:
+        #     print('Oh my you have a tie!!!')
+        # elif self.player_one or self.player_two == 'Rock':
+        #     if self.ai_one or self.ai_two == 'Scissors':
+        #         print('Rock crushes Scissors. Player, you win!')
+        # elif self.player_one or self.player_two == 'Scissors':
+        #     if self.ai_one or self.ai_two == 'Paper':
+        #         print('Scissors cuts Paper. Player, you win!')
+        # elif self.player_one or self.player_two == "Paper":
+        #     if self.ai_one or self.ai_two == 'Rock':
+        #         print('Paper covers Rock. Player, you win!')
+        # elif self.player_one or self.player_two == 'Rock':
+        #     if self.ai_one or self.ai_two == 'Lizard':
+        #         print('Rock crushes Lizard. Player, you win!!')
+        # elif self.player_one or self.player_two == 'Lizard':
+        #     if self.ai_one or self.ai_two == 'Spock':
+        #         print('Lizard poisons Spock. Player, you win!')
+        # elif self.player_one or self.player_two == 'Spock':
+        #     if self.ai_one or self.ai_two == 'Scissors':
+        #         print('Spock smashes Scissors. Player, you win!')
+        # elif self.player_one or self.player_two == 'Scissors':
+        #     if self.ai_one or self.ai_two == 'Lizard':
+        #         print('Scissors decapitates Lizard. Player, you win!')
+        # elif self.player_one or self.player_two == 'Lizard':
+        #     if self.ai_one or self.ai_two == 'Paper':
+        #         print('Lizard eats Paper. Player, you win')
+        # elif self.player_one or self.player_two == 'Paper':
+        #     if self.ai_one or self.ai_two == 'Spock':
+        #         print('Paper disproves Spock. Player, you win!')
+        # elif self.player_one or self.player_two == 'Spock':
+        #     if self.ai_one or self.ai_two == 'Rock':
+        #         print('Spock vaporizes Rock. Player, you win!')
+        # elif self.ai_one or self.ai_two == 'Rock':
+        #     if self.player_one or self.player_two == 'Scissors':
+        #         print('Rock crushes Scissors. Computer, you win!')
+        # elif self.ai_one or self.ai_two == 'Scissors':
+        #     if self.player_one or self.player_two == 'Paper':
+        #         print('Scissors cuts Paper. Computer, you win!')
+        # elif self.ai_one or self.ai_two == "Paper":
+        #     if self.player_one or self.player_two == 'Rock':
+        #         print('Paper covers Rock. Computer, you win!')
+        # elif self.ai_one or self.ai_two == 'Rock':
+        #     if self.player_one or self.player_two == 'Lizard':
+        #         print('Rock crushes Lizard. Computer, you win!!')
+        # elif self.ai_one or self.ai_two == 'Lizard':
+        #     if self.player_one or self.player_two == 'Spock':
+        #         print('Lizard poisons Spock. Computer, you win!')
+        # elif self.ai_one or self.ai_two == 'Spock':
+        #     if self.player_one or self.player_two == 'Scissors':
+        #         print('Spock smashes Scissors. Computer, you win!')
+        # elif self.ai_one or self.ai_two == 'Scissors':
+        #     if self.player_one or self.player_two == 'Lizard':
+        #         print('Scissors decapitates Lizard. Computer, you win!')
+        # elif self.ai_one or self.ai_two == 'Lizard':
+        #     if self.player_one or self.player_two == 'Paper':
+        #         print('Lizard eats Paper. Computer, you win')
+        # elif self.ai_one or self.ai_two == 'Paper':
+        #     if self.player_one or self.player_two == 'Spock':
+        #         print('Paper disproves Spock. Computer, you win!')
+        # elif self.ai_one or self.ai_two == 'Spock':
+        #     if self.player_one or self.player_two == 'Rock':
+        #         print('Spock vaporizes Rock. Computer, you win!')
+        
+        # while self.player_one or self.player_two == self.ai_one or self.ai_two == True:
+        #     user_input = input('Play again? Y/N. ')
+        #     if user_input == 'Y':
+        #         continue
+        #     elif user_input == 'N':
+        #         print ('Game over')
+        #     self.player_one +=1
+        #     self.player_two +=1
+        #     self.ai_one +=1 
+        #     self.ai_two +=1
+        #     print(s) 
                 
 
 
@@ -265,11 +362,6 @@ class Game:
     #         self.ai_two +=1
     #         print(s)    
     
-    def run_game(self):
-        self.intro_message()
-        self.display_gesture_options()
-        self.num_of_players()
-        self.choose_gesture()
         # self.gesture_options()
 
     
