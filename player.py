@@ -7,14 +7,14 @@ class Player:
         pass
     
     def result(self, run):
-        s = 0
+        self.score = 0
         for x in range (5):
             if self.picked_gesture == self.gesture_list[x]:
-                s = 1
-            if s == 0:
+                self.score = 1
+            if self.score == 0:
                 run = False
                 return run
-            if s == 1:
+            if self.score == 1:
                 self.picked_gesture = self.score
                 run = True
                 return run

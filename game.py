@@ -90,7 +90,7 @@ class Game:
         self.display_gesture_options()
         self.num_of_players()
         self.choose_gesture()
-        # self.toss_phase()
+        
         
     # def chosen_gesture(self):
     #     while True:
