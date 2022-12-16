@@ -5,11 +5,11 @@ from ai import Ai
 
 class Game:
     def __init__(self):
-        self.player = self.player_one = Human('player one')
-        self.player = self.player_two = Human('player one')
-        self.ai = self.ai_one = Ai('computer one)')
-        self.ai = self.ai_two = Ai('computer two')
+        self.player_one = Human('player one')
+        self.player_two = Human('player one')
         pass
+       
+        # self.ai = self.ai_two = Ai('computer two')
 
     def intro_message(self):
         self.welcome = 'Welcome to Rock, Scissor, Spock, and Lizard. Let the game begin!'
@@ -36,126 +36,104 @@ class Game:
     print()
     
     def num_of_players(self):
-        while True:
-            try:
-                user_input = int(input("How many will be playing? Enter 1, 2, or 3. "))
-            except ValueError:
-                print("There was an error, please enter a single digit number. ")
-                continue
-            if user_input <4 and user_input > 0:
-                print(user_input)
-                break
-            else:
-                print("There was an error, please enter a single digit number. ")
-        
-        # if user_input == "1":
+        try:
+            user_input = int(input("How many will be playing? Enter 1, 2, or 3. "))
+        except ValueError:
+            print("There was an error, please enter a single digit number. ")
+            
+        if user_input == 1:
+            self.player_two = Ai('Ai')
+        elif user_input == 2:
+            self.player_two = Human('player two')
+        else:
+            print("There was an error, please enter a single digit number. ")
+            
 
-    
-    
-    print()
-    print()
-
-    
+    def choose_gesture(self):
+        self.player_one.picked_gesture()
+        self.player_two.picked_gesture()
         
+        if self.player_two.picked_gesture == self.player_one.picked_gesture:
+            print('Oh my you have a tie!!!')
+        elif self.player_two.picked_gesture == 'Rock' and self.player_one.picked_gesture == 'Scissors':
+            print(self.player_two, 'You win!')
+        elif self.player_two.picked_gesture == 'Scissors' and self.player_one.picked_gesture == 'Paper':
+            print(self.player_two, 'You win!')
+        elif self.player_two.picked_gesture == "Paper" and self.player_one.picked_gesture == 'Rock':
+            print(self.player_two, 'You win!')
+        elif self.player_two.picked_gesture  == 'Rock'and self.player_one.picked_gesture == 'Lizard':
+            print(self.player_two, 'You win!!')
+        elif self.player_two.picked_gesture  == 'Lizard' and self.player_one.picked_gesture == 'Spock':
+            print(self.player_two, 'You win!')
+        elif self.player_two.picked_gesture == 'Spock' and self.player_one.picked_gesture == 'Scissors':
+            print(self.player_two, 'You win!')
+        elif self.player_two.picked_gesture == 'Scissors'and self.player_one.picked_gesture == 'Lizard':
+            print(self.player_two, 'You win!')
+        elif self.player_two.picked_gesture == 'Lizard'and self.player_one.picked_gesture == 'Paper':
+            print(self.player_two, 'You win')
+        elif self.player_two.picked_gesture == 'Paper' and self.player_one.picked_gesture == 'Spock':
+            print(self.player_two, 'You win!')
+        elif self.player_two.picked_gesture == 'Spock' and self.player_one.picked_gesture == 'Rock':
+            print(self.player_two, 'You win!')
+        self.player_one += 1
+        self.player_two += 1
+           
     
     def game_wins(self):
         self.player_one = 0
         self.player_two = 0
-        self.ai_one = 0
-        self.ai_two = 0
-        txt = "Player, you win!" or "Computer, you win!"
-        s = txt.count('Player, you win' or 'Computer, you win!')
+        txt = (f'{self.name} you win!')
+        s = txt.count(f'{self.name} you win')
         
     def run_game(self):
         self.intro_message()
         self.display_gesture_options()
         self.num_of_players()
-        self.choose.gesture()
-        self.computer_gesture()
-        self.chosen_gesture
+        self.choose_gesture()
+        # self.toss_phase()
         
-
-    
-        
-        while True:
-            if self.player_two == self.ai:
-                print('Oh my you have a tie!!!')
-            elif self.player_two == 'Rock':
-                if self.ai == 'Scissors':
-                    print(self.player_two, 'You win!')
-            elif self.ai == 'Rock':
-                if self.player_two == 'Scissors':
-                    print(self.ai, 'You win!')
-            elif self.player_two == 'Scissors':
-                if self.ai == 'Paper':
-                    print(self.player_two, 'You win!')
-            elif self.ai == 'Scissors':
-                if self.player_two == 'Paper':
-                    print(self.ai, 'You win!')
-            elif self.player_two  == "Paper":
-                if self.ai == 'Rock':
-                    print(self.player_two, 'You win!')
-            elif self.ai  == "Paper":
-                if self.player_two == 'Rock':
-                    print(self.ai, 'You win!')
-            elif self.player_two  == 'Rock':
-                if self.ai == 'Lizard':
-                    print(self.player_two, 'You win!!')
-            elif self.ai  == 'Rock':
-                if self.player_two == 'Lizard':
-                    print(self.ai, 'You win!!')
-            elif self.player_two  == 'Lizard':
-                if self.ai == 'Spock':
-                    print(self.player_two, 'You win!')
-            elif self.ai  == 'Lizard':
-                if self.player_two == 'Spock':
-                    print(self.ai, 'You win!')
-            elif self.player_two == 'Spock':
-                if self.ai == 'Scissors':
-                    print(self.player_two, 'You win!')
-            elif self.ai == 'Spock':
-                if self.player_two == 'Scissors':
-                    print(self.ai, 'You win!')
-            elif self.player_two == 'Scissors':
-                if self.ai == 'Lizard':
-                    print(self.player_two, 'You win!')
-            elif self.ai == 'Scissors':
-                if self.player_two == 'Lizard':
-                    print(self.ai, 'You win!')
-            elif self.player_two == 'Lizard':
-                if self.ai == 'Paper':
-                    print(self.player_two, 'You win')
-            elif self.ai == 'Lizard':
-                if self.player_two == 'Paper':
-                    print(self.ai, 'You win')
-            elif self.player_two == 'Paper':
-                if self.ai== 'Spock':
-                    print(self.player_two, 'You win!')
-            elif self.ai == 'Paper':
-                if self.player_two == 'Spock':
-                    print(self.ai, 'You win!')
-            elif self.player_two == 'Spock':
-                if self.ai == 'Rock':
-                    print(self.player_two, 'You win!')
-            elif self.ai == 'Spock':
-                if self.player_two == 'Rock':
-                    print(self.ai, 'You win!')
-                return self.player_two or self.ai
-        
-            while True: 
-                if self.player == self.ai:
-                    user_input = input('Play again? Y/N. ')
-                elif user_input == 'Y':
-                    continue
-                elif user_input == 'N':
-                    print ('Game over')
-                    break
-                self.player_one +=1
-                self.player_two +=1
-                self.ai +=1 
-                return self.player_one or self.player_two or self.ai
+    # def chosen_gesture(self):
+    #     while True:
+    #         if self.player_two.chosen_gesture == self.player_one.chosen_gesture:
+    #             print('Oh my you have a tie!!!')
+    #         elif self.player_two.chosen_gesture == 'Rock' and self.player_one.chosen_gesture == 'Scissors':
+    #             print(self.player_two, 'You win!')
+    #         elif self.player_two.chosen_gesture == 'Scissors' and self.player_one.chosen_gesture == 'Paper':
+    #             print(self.player_two, 'You win!')
+    #         elif self.player_two.chosen_gesture  == "Paper" and self.player_one.chosen_gesture == 'Rock':
+    #             print(self.player_two, 'You win!')
+    #         elif self.player_two.chosen_gesture  == 'Rock'and self.player_one.chosen_gesture == 'Lizard':
+    #             print(self.player_two, 'You win!!')
+    #         elif self.player_two.chosen_gesture  == 'Lizard' and self.player_one.chosen_gesture == 'Spock':
+    #             print(self.player_two, 'You win!')
+    #         elif self.player_two.chosen_gesture == 'Spock' and self.player_one.chosen_gesture == 'Scissors':
+    #             print(self.player_two, 'You win!')
+    #         elif self.player_two.chosen_gesture == 'Scissors'and self.player_one.chosen_gesture == 'Lizard':
+    #             print(self.player_two, 'You win!')
+    #         elif self.player_two.chosen_gesture == 'Lizard'and self.player_one.chosen_gesture == 'Paper':
+    #             print(self.player_two, 'You win')
+    #         elif self.player_two.chosen_gesture == 'Paper' and self.player_one.chosen_gesture == 'Spock':
+    #             print(self.player_two, 'You win!')
+    #         elif self.player_two.chosen_gesture == 'Spock' and self.player_one.chosen_gesture == 'Rock':
+    #             print(self.player_two, 'You win!')
+            
+    #         self.player_one +1
+    #         self.player_two +1
+    #         return self.player_one or self.player_two 
         
         
+        # while True: 
+        #         if self.player == self.ai:
+        #             user_input = input('Play again? Y/N. ')
+        #         elif user_input == 'Y':
+        #             continue
+        #         elif user_input == 'N':
+        #             print ('Game over')
+        #             break
+        #         self.player_one +=1
+        #         self.player_two +=1
+        #         self.ai +=1 
+        #         return self.player_one or self.player_two or self.ai
         
         
         
