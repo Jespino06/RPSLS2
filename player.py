@@ -3,7 +3,7 @@ class Player:
         self.name = name
         self.gesture_list = ['Rock', 'Paper', 'Scissor', 'Spock', 'Lizard']
         self.score = 0
-        self.picked_gesture = "None"
+        self.picked_gesture= "None"
         pass
     
     def result(self, run):
